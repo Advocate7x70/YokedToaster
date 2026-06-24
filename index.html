@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yoked Toast: Brock Toastner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero panel">
+      <div>
+        <p class="eyebrow">Yoked Toast Idle</p>
+        <h1>Brock Toastner</h1>
+        <p class="subcopy">Make toast, chase the family legacy and become as powerful as your dad, Texas Toast.</p>
+      </div>
+      <div class="hero-actions">
+        <button id="prestigeBtn" class="gold">Prestige</button>
+        <button id="saveBtn" class="ghost">Save</button>
+      </div>
+    </section>
+
+    <section class="story panel">
+      <strong>Opening Story</strong>
+      <p id="storyText">My name is Brock Toastner. My father is Texas Toast. People say he was born pre-buttered and bench-pressed a cast iron skillet before he could crust.</p>
+    </section>
+
+    <section class="game-grid">
+      <div class="panel toaster-panel">
+        <div class="stats stats-five">
+          <div><span id="toastCount">0</span><small>toast slices</small></div>
+          <div><span id="tps">0</span><small>toast/sec</small></div>
+          <div><span id="tapPower">1</span><small>toast/click</small></div>
+          <div><span id="croutons">0</span><small>croutons</small></div>
+          <div><span id="swoleRank">Toast</span><small>swole rank</small></div>
+        </div>
+
+        <div id="boostBanner" class="boost-banner hidden">🧈 Butter pump: <strong id="boostTime">0s</strong></div>
+        <div id="ratioBanner" class="ratio-banner">Protein 50% | Carbs 50%</div>
+
+        <button id="toastBtn" class="toaster" aria-label="Make toast">
+          <div class="slots"><span></span><span></span></div>
+          <div class="pecs"></div>
+          <div class="abs"></div>
+          <div class="face">◕‿◕</div>
+          <div id="visibleGear" class="visible-gear"></div>
+          <div class="arms left">💪</div>
+          <div class="arms right">💪</div>
+        </button>
+        <p id="yokeLabel" class="hint">Click Brock to make toast faster.</p>
+        <div class="dad-card">
+          <div class="dad-avatar">🍞🤠</div>
+          <div><strong>Texas Toast</strong><p id="dadLine">Son, every loaf starts with a single slice.</p></div>
+        </div>
+      </div>
+
+      <aside class="panel shop">
+        <div class="tabs">
+          <button class="tab active" data-tab="upgrades">Upgrades</button>
+          <button class="tab" data-tab="spreads">Spreads</button>
+          <button class="tab" data-tab="prestige">Croutons</button>
+        </div>
+        <div id="upgrades" class="shop-list"></div>
+        <div id="spreads" class="shop-list hidden"></div>
+        <div id="prestige" class="shop-list hidden"></div>
+      </aside>
+    </section>
+  </main>
+
+  <div id="eventModal" class="event-modal hidden">
+    <div class="event-card panel">
+      <button id="closeEvent" class="x">×</button>
+      <h2 id="eventTitle">Texas Toast Appears</h2>
+      <p id="eventText"></p>
+      <div id="eventChoices" class="event-choices"></div>
+    </div>
+  </div>
+
+  <div id="butterLayer" class="butter-layer"></div>
+  <div id="floaties" class="floaties"></div>
+  <script src="game.js"></script>
+</body>
+</html>
